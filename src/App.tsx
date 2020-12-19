@@ -12,6 +12,7 @@ function App() {
       <BrowserRouter>
         <Route path={'/'} exact component={Dashboard} />
         <Route path={'/users'} component={Users} />
+        <Route path={'/dashboard'} component={Dashboard} />
         <Route path={'/login'} component={Login} />
         <Route path={'/register'} component={Register} />
       </BrowserRouter>
