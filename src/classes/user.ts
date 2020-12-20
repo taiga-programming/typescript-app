@@ -1,6 +1,12 @@
 import { Role } from './role';
 
 export class User {
+  canView(arg0: string) {
+    throw new Error('Method not implemented.');
+  }
+  canEdit(arg0: string) {
+    throw new Error('Method not implemented.');
+  }
   id: number;
   first_name: string;
   last_name: string;
