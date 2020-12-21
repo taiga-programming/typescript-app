@@ -23,9 +23,14 @@ class Menu extends Component<{ user: User }> {
     }
   ];
 
+  componentDidMount() {
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    if (this.menuItems! == null)
+      localStorage.setItem('menuitems', JSON.stringify(this.menuItems));
+  }
+
   render() {
     const menu: JSX.Element[] = [];
-
     this.menuItems.forEach((item) => {
       if (this.props.user.canView(item.name.toLowerCase())) {
         menu.push(
@@ -59,4 +64,5 @@ class Menu extends Component<{ user: User }> {
   }
 }
 
+// @ts-ignore
 export default connect((state) => ({ user: state.user }))(Menu);

@@ -1,12 +1,6 @@
 import { Role } from './role';
 
 export class User {
-  canView(arg0: string) {
-    throw new Error('Method not implemented.');
-  }
-  canEdit(arg0: string) {
-    throw new Error('Method not implemented.');
-  }
   id: number;
   first_name: string;
   last_name: string;
@@ -28,5 +22,17 @@ export class User {
     this.email = email;
     this.role = role;
     this.permissions = permissions;
+  }
+
+  get name() {
+    return this.first_name + ' ' + this.last_name;
+  }
+
+  canView(page: string) {
+    return this.permissions.some((p) => p === `view_${page}`);
+  }
+
+  canEdit(page: string) {
+    return this.permissions.some((p) => p === `edit_${page}`);
   }
 }

@@ -4,6 +4,7 @@ import axios from 'axios';
 import { Order } from '../../classes/order';
 import { OrderItem } from '../../classes/order_item';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 class OrderItems extends Component<{ match: any }> {
   state = {
     order_items: []
