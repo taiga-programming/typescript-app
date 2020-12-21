@@ -115,4 +115,6 @@ class Users extends Component<{ user: User }> {
 }
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-export default connect((state) => ({ user: state.user }))(Users);
+export default connect((state: { user: User }) => ({ user: state.user }))(
+  Users
+);

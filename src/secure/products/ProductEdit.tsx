@@ -5,6 +5,7 @@ import { Redirect } from 'react-router-dom';
 import ImageUpload from '../components/ImageUpload';
 import { Product } from '../../classes/product';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 class ProductEdit extends Component<{ match: any }> {
   state = {
     title: '',

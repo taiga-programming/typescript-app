@@ -64,5 +64,4 @@ class Menu extends Component<{ user: User }> {
   }
 }
 
-// @ts-ignore
-export default connect((state) => ({ user: state.user }))(Menu);
+export default connect((state: { user: User }) => ({ user: state.user }))(Menu);

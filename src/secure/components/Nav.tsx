@@ -41,4 +41,4 @@ class Nav extends Component<{ user: User }> {
   }
 }
 
-export default connect((state) => ({ user: state.user }))(Nav);
+export default connect((state: { user: User }) => ({ user: state.user }))(Nav);
