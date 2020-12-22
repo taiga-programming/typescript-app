@@ -118,8 +118,6 @@ class Profile extends Component<any> {
   }
 }
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-
 export default connect(
   (state: { user: User }) => ({ user: state.user }),
   (dispatch) => ({ setUser: (user: any) => dispatch(setUser(user)) })

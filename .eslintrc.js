@@ -24,7 +24,9 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'explicit-module-boundary-types': 'off',
     '@typescript-eslint/ban-ts-comment': 'off',
-    'ban-ts-comment': 'off'
+    'ban-ts-comment': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    'no-explicit-any': 'off'
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
